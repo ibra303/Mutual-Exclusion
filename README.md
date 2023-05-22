@@ -1,15 +1,22 @@
 # Mutual Exclusion - Dijkstra's first self-stabilizing algorithm for the mutual Exclusion problem in a circular network.
 
 Introduction:
+
                 mutual exclusion is a property of concurrency control, which is instituted for the purpose of preventing race conditions. 
-                It is the requirement that one thread of execution never enters a critical section while a concurrent thread of execution is already accessing said critical                   section, which refers to an interval of time during which a thread of execution accesses a shared resource or shared memory.
+                It is the requirement that one thread of execution never enters a critical section while a concurrent thread of execution 
+                is already accessing said critical section, which refers to an interval of time during which a thread of execution accesses 
+                a shared resource or shared memory.
 
-        ->      The shared resource is a data object, which two or more concurrent threads are trying to modify (where two concurrent read operations are permitted but, 
-                no two concurrent write operations or one read and one write are permitted, since it leads to data inconsistency).
-                Mutual exclusion algorithms ensure that if a process is already performing write operation on a data object [critical section] no other process/thread is                       allowed to access/modify the same object until the first process has finished writing upon the data object [critical section] and released the object for                       other processes to read and write upon.
+                The shared resource is a data object, which two or more concurrent threads are trying to modify (where two concurrent 
+                read operations are permitted but, no two concurrent write operations or one read and one write are permitted, since it 
+                leads to data inconsistency). Mutual exclusion algorithms ensure that if a process is already performing write operation 
+                on a data object [critical section] no other process/thread is allowed to access/modify the same object until the first 
+                process has finished writing upon the data object [critical section] and released the object for other processes to read and write upon.
 
-        ->      The requirement of mutual exclusion was first identified and solved by Edsger W. Dijkstra in his seminal 1965 paper "Solution of a problem in concurrent                       programming control", which is credited as the first topic in the study of concurrent algorithms!
+                The requirement of mutual exclusion was first identified and solved by Edsger W. Dijkstra in his seminal 1965 paper 
+                "Solution of a problem in concurrent programming control", which is credited as the first topic in the study of concurrent algorithms!
               
+                
 Motivation:
   
               The code refers to Dijkstra's first self-stabilizing algorithm for the mutual exclusion problem in a circular network.

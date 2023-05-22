@@ -1,5 +1,4 @@
 """
-
        @Author: Habib Ibrahim
        @Date: 25/05/2023
        @issue: Mutual Exclusion  - Distributed systems
@@ -81,17 +80,21 @@ def print_result(processorsNum, processorsValues):
     print("\nprocessors values = " + str(processorsValues))
     for i in range(processorsNum):
         if have_token[i]:
-            print("Processor in index " + str(i - 1) + " is the only one who has a token ..")
+            print("Processor in index " + str(i) + " is the only one who has a token ..")
     print("Problem solved, " + str(number_of_iterations) + " iterations needed to solve the problem!\n")
 
 
 # Dijkstra's first self-stabilizing Algorithm
 if __name__ == '__main__':
     number_of_iterations = 0
+    k = 0
     processors_num, states_num, processors_values = ME_inputs()
     have_token, tokens = calculate_tokens(processors_num, processors_values)
     while tokens != 1:
         number_of_iterations += 1
         processors_values = make_stable(processors_num, processors_values, have_token, tokens, states_num)
         have_token, tokens = calculate_tokens(processors_num, processors_values)
+        if number_of_iterations > 10000:
+            print("Cant solve this state!")
+            exit()
     print_result(processors_num, processors_values)

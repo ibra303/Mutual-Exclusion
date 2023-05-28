@@ -3,7 +3,7 @@
        @Author: Habib Ibrahim
        @Date: 25/05/2023
        @issue: Mutual Exclusion  - Distributed systems
-       @Version: "0.1"
+       @Version: "0.1" , "python 3.9"
        @Status: Code Optimization
 
 Introduction:

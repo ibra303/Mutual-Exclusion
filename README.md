@@ -1,4 +1,4 @@
-# Mutual Exclusion - Dijkstra's first self-stabilizing algorithm for the mutual Exclusion problem in a circular network.
+# Mutual Exclusion 
 
        @Author: Habib Ibrahim
        @Date: 25/05/2023
